@@ -134,7 +134,6 @@ public class ValueAnimatorActivity extends Activity
 			@Override
 			public void onAnimationRepeat(Animator animation)
 			{
-				// TODO Auto-generated method stub
 				Log.e(TAG, "onAnimationRepeat");
 			}
 
@@ -150,7 +149,6 @@ public class ValueAnimatorActivity extends Activity
 			@Override
 			public void onAnimationCancel(Animator animation)
 			{
-				// TODO Auto-generated method stub
 				Log.e(TAG, "onAnimationCancel");
 			}
 		});
