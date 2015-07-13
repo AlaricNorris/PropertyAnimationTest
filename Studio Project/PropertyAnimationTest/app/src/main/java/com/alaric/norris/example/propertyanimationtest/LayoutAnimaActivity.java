@@ -5,8 +5,10 @@ import android.animation.AnimatorInflater;
 import android.animation.AnimatorSet;
 import android.animation.LayoutTransition;
 import android.animation.ObjectAnimator;
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.Spannable;
 import android.text.SpannableString;
@@ -77,11 +79,33 @@ public class LayoutAnimaActivity extends Activity implements OnCheckedChangeList
         span.setSpan(new ForegroundColorSpan(Color.RED), 11, 16, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         span.setSpan(new BackgroundColorSpan(Color.YELLOW), 11, 16, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         mTextView.setText(span);
-        Animator anim = AnimatorInflater.loadAnimator(this, R.animator.nrs_scroll_y);
+        anim = AnimatorInflater.loadAnimator(this, R.animator.nrs_scroll_y);
         anim.setTarget(mLinearLayout);
         anim.start();
     }
 
+    Animator anim;
+
+    @TargetApi(Build.VERSION_CODES.KITKAT)
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (Build.VERSION.SDK_INT == Build.VERSION_CODES.KITKAT) {
+            if (anim != null && anim.isPaused()) {
+                anim.resume();
+            }
+        }
+    }
+
+    @TargetApi(Build.VERSION_CODES.KITKAT)
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if (Build.VERSION.SDK_INT == Build.VERSION_CODES.KITKAT)
+            if (anim.isRunning()) {
+                anim.pause();
+            }
+    }
 
     public void addBtn(View view) {
         final Button button = new Button(this);
