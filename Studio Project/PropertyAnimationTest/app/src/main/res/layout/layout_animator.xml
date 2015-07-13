@@ -1,42 +1,95 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
     android:id="@+id/id_container"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="asdfasldkjfaslk;dfjal;skdfja;lskdjf"
+        android:textSize="30dp"/>
+
+
+    <!--android:layout_width="63sp"-->
+    <!--android:layout_height="63sp"-->
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:layout_width="28pt"
+            android:layout_height="28pt"
+            android:background="@color/abc_search_url_text_normal"
+            android:src="@drawable/bol_red"/>
+
+        <ImageButton
+            android:layout_width="28pt"
+            android:layout_height="28pt"
+            android:background="@color/abc_search_url_text_normal"
+            android:src="@drawable/bol_red"/>
+
+        <ImageButton
+            android:layout_width="28pt"
+            android:layout_height="28pt"
+            android:background="@color/abc_search_url_text_normal"
+            android:src="@drawable/bol_red"/>
+
+        <ImageButton
+            android:layout_width="28pt"
+            android:layout_height="28pt"
+            android:background="@color/abc_search_url_text_normal"
+            android:src="@drawable/bol_red"/>
+
+        <ImageButton
+            android:layout_width="28pt"
+            android:layout_height="28pt"
+            android:background="@color/abc_search_url_text_normal"
+            android:src="@drawable/bol_red"/>
+    </LinearLayout>
+
+    <ImageButton
+        android:layout_width="28pt"
+        android:layout_height="28pt"
+        android:background="@color/abc_search_url_text_normal"
+        android:src="@drawable/bol_red"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="addBtn"
-        android:text="addBtns" />
+        android:text="addBtns"/>
 
     <CheckBox
         android:id="@+id/id_appear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:checked="true"
-        android:text="APPEARING" />
+        android:text="APPEARING"/>
 
     <CheckBox
         android:id="@+id/id_change_appear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:checked="true"
-        android:text="CHANGE_APPEARING" />
+        android:text="CHANGE_APPEARING"/>
 
     <CheckBox
         android:id="@+id/id_disappear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:checked="true"
-        android:text="DISAPPEARING" />
+        android:text="DISAPPEARING"/>
 
     <CheckBox
-          android:id="@+id/id_change_disappear"
+        android:id="@+id/id_change_disappear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:checked="true"
-        android:text="CHANGE_DISAPPEARING " />
+        android:text="CHANGE_DISAPPEARING "/>
 
 </LinearLayout>
