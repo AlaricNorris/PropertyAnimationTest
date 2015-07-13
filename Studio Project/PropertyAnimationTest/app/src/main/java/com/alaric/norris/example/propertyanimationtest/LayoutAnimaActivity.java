@@ -76,7 +76,7 @@ public class LayoutAnimaActivity extends Activity implements OnCheckedChangeList
 
 	private void runAnimation(View inView) {
 //		code2ExecuteAnimation(inView);
-		Animator anim = AnimatorInflater.loadAnimator(this , R.animator.rotate_y_scale) ;
+		Animator anim = AnimatorInflater.loadAnimator(this , R.animator.nrs_rotate_y_scale) ;
 		anim.setTarget(inView) ;
 		anim.start() ;
 	}
