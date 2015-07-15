@@ -5,6 +5,7 @@ import android.animation.AnimatorInflater;
 import android.animation.AnimatorSet;
 import android.animation.LayoutTransition;
 import android.animation.ObjectAnimator;
+import android.animation.PropertyValuesHolder;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.graphics.Color;
@@ -126,6 +127,20 @@ public class LayoutAnimaActivity extends Activity implements OnCheckedChangeList
 //		code2ExecuteAnimation(inView);
         xml2ExecuteAnimation(inView);
     }
+
+    public void rotateY(View inView) {
+        PropertyValuesHolder pvhX = PropertyValuesHolder.ofFloat("scaleX", 1f,
+                1.2f, 1f);
+        PropertyValuesHolder pvhY = PropertyValuesHolder.ofFloat("scaleY", 1f,
+                1.2f, 1f);
+        LinearLayout parent = (LinearLayout) inView.getParent();
+        for (int i = 0; i < parent.getChildCount(); i++) {
+            ObjectAnimator.ofPropertyValuesHolder(parent.getChildAt(i), pvhX, pvhY).setDuration(200).start();
+        }
+
+
+    }
+
 
     private void xml2ExecuteAnimation(View inView) {
         Animator anim = AnimatorInflater.loadAnimator(this, R.animator.nrs_rotate_y_scale);

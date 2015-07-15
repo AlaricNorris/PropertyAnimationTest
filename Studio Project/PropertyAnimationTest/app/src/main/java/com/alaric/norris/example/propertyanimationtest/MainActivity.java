@@ -51,6 +51,14 @@ public class MainActivity extends ActionBarActivity
                 startActivity(new Intent(getApplicationContext(), LayoutAnimaActivity.class
                 ));
                 break;
+            case 1:
+                startActivity(new Intent(getApplicationContext(), AnimatorSetActivity.class
+                ));
+                break;
+            case 2:
+                startActivity(new Intent(getApplicationContext(), ViewAnimateActivity.class
+                ));
+                break;
         }
 //        FragmentManager fragmentManager = getSupportFragmentManager();
 //        fragmentManager.beginTransaction()
